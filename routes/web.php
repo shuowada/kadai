@@ -13,9 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+Route::get('/', function () {
+    return view('welcome');});
 
-Route::get('/{any}', function() {
-       return view('app');})->where('any', '.*');
+//Route::get('/{any}', function() {
+//       return view('app');})->where('any', '.*');
+
+Route::get('inputForm', 'postTestController@inputForm'); // 入力フォーム画面(inputForm)のURL割当、起動コントローラ・関数指定
+Route::post('formPost', 'postTestController@formPost');//結果画面(resultPage)のURL割当、起動コントローラ・関数指定
+
+Route::get('dentakutest', 'postTestdentakuController@dentakutest'); // 入力フォーム画面(inputForm)のURL割当、起動コントローラ・関数指定
+Route::post('formPost', 'postTestdentakuController@formPost');
