@@ -1,8 +1,12 @@
 import VueRouter from 'vue-router';
+import dentakutest from "./components/dentakutest";
 import HeaderComponent from "./components/HeaderComponent";
 import TaskListComponent from "./components/TaskListComponent";
 import TaskCreateComponent from "./components/TaskCreateComponent";
 import TaskShowComponent from "./components/TaskShowComponent";
+import Vue from 'vue'
+import router from './router' 
+import App from './App.vue'
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -42,6 +46,14 @@ Vue.use(VueRouter);
             props: true
         },
 
+
+        {
+            path: '/dentakutest',
+            name: 'dentaku.rooting',
+            component: dentakutest,
+            
+        },  
+
      ]
  });
 
@@ -58,6 +70,7 @@ Vue.use(VueRouter);
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('header-component', HeaderComponent);
+Vue.component('dentakutest-component', dentakutestComponent);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -66,5 +79,8 @@ Vue.component('header-component', HeaderComponent);
 
 const app = new Vue({
     el: '#app',
-     router
+ router,
+components: { App },
+    template: '<h1>Hello world</h1>',
+    template: '<App />'
 });

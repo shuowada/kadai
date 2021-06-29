@@ -15,4 +15,5 @@ mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/script.js', 'public/js')
     .vue()
     .sass('resources/sass/app.scss', 'public/css');
+    .browserSync('my-domain.dev'); 
 

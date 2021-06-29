@@ -4,11 +4,19 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>電卓テスト</title>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  </head>
+ </head>
 <body>
+
 <div>{{$msg}}</div>
+
+
 <table id="app">
-<form action="dentakuresult" method="POST">
+<form action="dentakutestresult" method="POST">
+ @csrf
+      <div>果物名：<input type="text" name="fruits_name"></div>
+      <div>果物数：<input type="text" name="fruits_count"></div>
+      <div>単価&nbsp;&nbsp;&nbsp;：<input type="text" name="fruits_value"></div>
+      <input type="submit" name="計算">
             <tr>
 <input type="text" v-model="output"></td>
                 <td><button value="C" v-on:click="calc('C')">C</button></td>
@@ -37,8 +45,15 @@
                 <td><button onClick="calc('+')">+</button><input name="tsu" type="text"></td>
                 <td><button onClick="calc('=')">=</button><button type="submit">送信</button></td>
             </tr>
+
         </table>
+
+<div id="app">
+ <dentakutest-component></dentakutest-component>
+ </div>
+<router-view></router-view>
 </body>
+export default {}
 <script src="{{ asset('/js/script.js') }}"></script>
 
 </html>

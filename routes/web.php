@@ -1,7 +1,8 @@
 <?php
-
+use App\Http\Controllers\dentakuTestController;
 use Illuminate\Support\Facades\Route;
 
+use vendor\laravel\framework\src\Illuminate\Routing;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
