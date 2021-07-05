@@ -1,3 +1,3 @@
 # kadai
 電卓アプリ課題について
-npm run dev できなくなったから違うの作成
+npm run dev できなくなったから違うの作成→kadai1へ
